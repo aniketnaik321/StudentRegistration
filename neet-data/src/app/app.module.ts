@@ -11,6 +11,10 @@ import { PreferencesComponent } from './preferences/preferences.component';
 import { StatusComponent } from './status/status.component';
 import { WhatIfComponent } from './what-if/what-if.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { HomeComponent } from './home/home.component';
+import { NeetStatusComponent } from './neet-status/neet-status.component';
+import {TableModule} from 'primeng/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { RegistrationComponent } from './registration/registration.component';
     PreferencesComponent,
     StatusComponent,
     WhatIfComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HomeComponent,
+    NeetStatusComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

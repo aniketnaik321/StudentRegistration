@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+body{
+background-color:white;
+}
+
+.radial-border{
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: 1px solid;
+-webkit-box-shadow: 10px 9px 37px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 9px 37px -11px rgba(0,0,0,0.75);
+box-shadow: 10px 9px 37px -11px rgba(0,0,0,0.75);
+}
+
+.body-container{
+    min-height: 80vh;
+}
