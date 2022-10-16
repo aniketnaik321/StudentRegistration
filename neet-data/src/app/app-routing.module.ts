@@ -12,10 +12,11 @@ const routes: Routes = [
   { path: 'neetdata/possibilities', component: PossibilitiesComponent },
   { path: 'neetdata/status', component: NeetStatusComponent},
   { path: 'neetdata/preferences', component: PreferencesComponent},
-  { path: 'neetdata/Login', component: LoginComponent},
-  { path: 'neetdata/Registration', component: RegistrationComponent},
-  { path: '**', component: HomeComponent},
-  { path: '', component: HomeComponent}
+  { path: 'neetdata/login', component: LoginComponent},
+  { path: 'neetdata/home', component: HomeComponent},
+  { path: 'neetdata/registration', component: RegistrationComponent},
+  { path: '**', component: LoginComponent},
+  { path: '', component: LoginComponent}
 ];
 
 @NgModule({

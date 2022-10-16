@@ -1,35 +1,39 @@
-<div class="container mt-2">
+<div class="container mt-2 radial-border body-container">
 
     <div class="row">
         <div class="col-md-12">
             <div class="card border-0">
                 <div class="card-header bg-transparent border-0 text-dark">
-                   <button class="btn btn-primary btn-width">Possibilities</button>
-                   <button class="btn btn-primary btn-width">Preferences</button>
-                   <button class="btn btn-primary btn-width ">Status</button>
-                   <button class="btn btn-primary btn-width">What If</button>
+                   <button class="btn-width" pButton pRipple label="Possibilities" icon="pi pi-check"></button>
+                   <button class="btn-width" pButton pRipple label="Preferences" icon="pi pi-check"></button>
+                   <button class="btn-width" pButton pRipple label="Status" icon="pi pi-check"></button>
+                   <button class="btn-width" pButton pRipple label="What If" icon="pi pi-check"></button>
                 </div>
                 <div class="card-body text-muted bg-transparent border-0 small ">
-                    <p-table [value]="Colleges"  styleClass="p-datatable-striped" responsiveLayout="scroll"  [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
+                    <p-table #dt1 [paginator]="true" [value]="Colleges"  styleClass="p-datatable-striped"  [rows]="7" [showCurrentPageReport]="true" 
                     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
-                        <ng-template pTemplate="caption">
-                            Header
-                        </ng-template>
+                    <ng-template pTemplate="caption" [globalFilterFields]="['name']">
+                        <div class="flex">                            
+                            <span class="p-input-icon-left ml-auto">
+                                <i class="pi pi-search"></i>
+                                <input pInputText type="text" placeholder="Search by college name" />
+                            </span>
+                        </div>
+                    </ng-template>
                         <ng-template pTemplate="header">
                             <tr>
                                 <th>Sr.</th>
+                                <th>College Code</th>
                                 <th>College Name</th>                                
                             </tr>
                         </ng-template>
-                        <ng-template pTemplate="body" let-college>
+                        <ng-template pTemplate="body" let-college let-i="rowIndex">
                             <tr>
-                                <td>1</td>
-                                <td>{{college.name}}</td>                                
+                                <td>{{i+1}}</td>
+                                <td>{{college.code}}</td>
+                                <td>{{college.name}}</td>
                             </tr>
-                        </ng-template>
-                        <ng-template pTemplate="summary">
-                            Footer
-                        </ng-template>
+                        </ng-template>                        
                     </p-table>
                 </div>
                 <div class="card-footer bg-transparent border-0">                 

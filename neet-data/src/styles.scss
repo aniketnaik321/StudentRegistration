@@ -4,13 +4,14 @@
 
 body{
 background-color:white;
+font-size: 14px!important;
 }
 
 .radial-border{
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
-border: 1px solid;
+border: 1px solid rgb(247, 244, 244);
 -webkit-box-shadow: 10px 9px 37px -11px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 9px 37px -11px rgba(0,0,0,0.75);
 box-shadow: 10px 9px 37px -11px rgba(0,0,0,0.75);

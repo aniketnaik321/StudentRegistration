@@ -22,7 +22,7 @@ export class NeetStatusComponent implements OnInit {
       this._neetDataService.GetQueryData('1').subscribe((resp)=>{
 
         return this.Colleges= resp.map((T:any)=>{
-        return {name:T.R2}
+        return {name:T.R2.split(":")[1], code:T.R2.split(":")[0]}
         })
 
       })

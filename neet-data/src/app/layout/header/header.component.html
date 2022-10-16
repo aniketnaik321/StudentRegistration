@@ -1,5 +1,5 @@
 
-<div class="container mt-5 border-bottom">
+<div class="container mt-5 header-border bg-dark text-light p-3 rounded-0">
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,20 @@
     </div>
 </div>
   </nav> -->
+  <div class="row">
+<div class="col-6">
   <h4>
-    NEET Addmission Asssistance
+    <a class="nav-link" [routerLink]="['neetdata/home']" href="#">NEET Admission Asssistance</a>    
   </h4>
 </div>
+
+<div class="col-3 offset-3">
+  <button type="button" class="btn btn-default float-end text-light" (click)="menu.toggle($event)">
+    <i class="pi pi-user" aria-hidden="true"></i> &nbsp;
+    Ramesh Sharma
+  </button>
+</div>
+  </div>
+</div>
+
+<p-menu #menu [popup]="true" [model]="items"></p-menu>
