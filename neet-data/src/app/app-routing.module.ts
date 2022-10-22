@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'neetdata/status', component: StatusComponent},
   { path: 'neetdata/preferences', component: PreferencesComponent},
   { path: 'neetdata/Login', component: LoginComponent},
-  { path: 'neetdata/Registration', component: RegistrationComponent},
+  { path: 'neetdata/registration', component: RegistrationComponent},
   { path: '**', component: LoginComponent},
   { path: '', component: LoginComponent}
 ];

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,11 @@ import { PreferencesComponent } from './preferences/preferences.component';
 import { StatusComponent } from './status/status.component';
 import { WhatIfComponent } from './what-if/what-if.component';
 import { RegistrationComponent } from './registration/registration.component';
+import {MenubarModule} from 'primeng/menubar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MenuModule} from 'primeng/menu';
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +31,13 @@ import { RegistrationComponent } from './registration/registration.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MenubarModule,
+    BrowserAnimationsModule  ,
+    MenuModule,
+    TableModule  
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
