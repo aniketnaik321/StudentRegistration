@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,13 +11,10 @@ import { PreferencesComponent } from './preferences/preferences.component';
 import { StatusComponent } from './status/status.component';
 import { WhatIfComponent } from './what-if/what-if.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { HomeComponent } from './home/home.component';
-import { NeetStatusComponent } from './neet-status/neet-status.component';
-import {TableModule} from 'primeng/table';
-import { HttpClientModule } from '@angular/common/http';
+import {MenubarModule} from 'primeng/menubar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MenuModule} from 'primeng/menu';
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
 
 
 @NgModule({
@@ -31,20 +27,17 @@ import {InputTextModule} from 'primeng/inputtext';
     PreferencesComponent,
     StatusComponent,
     WhatIfComponent,
-    RegistrationComponent,
-    HomeComponent,
-    NeetStatusComponent
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    TableModule,
-    HttpClientModule,
+    MenubarModule,
+    BrowserAnimationsModule  ,
     MenuModule,
-    ButtonModule,
-    InputTextModule
+    TableModule  
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
