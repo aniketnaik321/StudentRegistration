@@ -1,12 +1,12 @@
 
-<div class="container mt-5 header-border bg-dark text-light p-3 rounded-0">
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <div class="container mt-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <!-- <a class="navbar-brand" href="#">Hidden brand</a> 
+      
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['neetdata/possibilities']" [routerLinkActive]="['active']">Possibilities </a>
@@ -24,21 +24,31 @@
       </ul>      
     </div>
 </div>
-  </nav> -->
-  <div class="row">
-<div class="col-6">
-  <h4>
-    <a class="nav-link" [routerLink]="['neetdata/home']" href="#">NEET Admission Asssistance</a>    
-  </h4>
-</div>
+  </nav>
+</div> -->
 
-<div class="col-3 offset-3">
-  <button type="button" class="btn btn-default float-end text-light" (click)="menu.toggle($event)">
-    <i class="pi pi-user" aria-hidden="true"></i> &nbsp;
-    Ramesh Sharma
-  </button>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+      <p-menubar [model]="items" [ngClass]="['fw-bold','text-light']" [style]="{'background-color':'transparent','border':0}">
+        <ng-template pTemplate="start">
+          <img src="assets/images/gfx_logo.png" height="40" class="mr-2">
+      </ng-template>
+      <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search">
+    </ng-template>
+
+      </p-menubar>
+      
+    </div>
+
+    <p-menu #menu [popup]="true" [model]="logoutmenu"></p-menu>
+   
   </div>
-</div>
-
-<p-menu #menu [popup]="true" [model]="items"></p-menu>
+    </div>
+    <!-- <span class="p-input-icon-right float-end">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText class="p-inputtext-sm rounded-pill" placeholder="Search" />
+  </span> -->
+  </nav>
