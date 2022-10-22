@@ -28,19 +28,6 @@ mydb = mysql.connector.connect(
 )
 
 
-# mydb = mysql.connector.connect(
-#   host="88.99.99.104",
-#   user="gfxtechs_ecom",
-#   password="8UdAJFYd4pDQEAi",
-#   database="gfxtechs_ecomm_db1"  
-# )
-
-# mydb = mysql.connector.connect(
-#   host="localhost",
-#   user="gfxtechs_ecom",
-#   password="8UdAJFYd4pDQEAi",
-#   database="gfxtechs_ecomm_db1"
-# )
 
 
 class QueryEvl():   
